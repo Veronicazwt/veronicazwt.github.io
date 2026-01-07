@@ -382,10 +382,10 @@ p{
 }
 
 .about__picture > img {
-        width: 220px;          
-        height: 220px;         
-        object-fit: cover;     
-        border-radius: 50%;    
+        aspect-ratio: 1 / 1;          
+        width: clamp(160px, 24vw, 280px); 
+        object-fit: cover;            
+        border-radius: 50%;
         display: block;
 }
 
