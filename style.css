@@ -383,7 +383,7 @@ p{
 
 .about__picture > img {
         aspect-ratio: 1 / 1;          
-        width: clamp(160px, 24vw, 280px); 
+        width: clamp(200px, 32vw, 400px); 
         object-fit: cover;            
         border-radius: 50%;
         display: block;
