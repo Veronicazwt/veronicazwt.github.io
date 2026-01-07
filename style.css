@@ -354,10 +354,10 @@ p{
 
 .about__image {
     margin-inline: auto;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 50%;
-    translate: -50%; 
+    translate: -50%; */
     display: block;
 }
 .about__text {
@@ -384,6 +384,7 @@ p{
 .about__picture > img {
     border-radius: 50%;
     margin-bottom: 16px;
+    display: block;
 }
 
 @media (prefers-reduced-motion: no-preference){
@@ -403,6 +404,8 @@ p{
     .about__wrapper {
         padding: 60px 0;
         display: flex;
+        align-items: center;
+        gap: 24px;
     }
     
     .about__image {
