@@ -455,6 +455,64 @@ p{
     display: block;
 }
 }
+
+
+/* About: two-column layout and fixed avatar box */
+.about__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr; /* image | text */
+    gap: 2rem;
+    align-items: center;
+    padding: 60px 0; /* keep your spacing */
+  }
+  
+  /* Fixed-size avatar (desktop) */
+  .about__picture {
+    width: 360px;
+    height: 360px;
+  }
+  
+  /* Make the image fill the box and crop to a perfect circle */
+  .about__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0; /* override margin-inline: auto from earlier */
+  }
+  
+  /* Headline scale for good balance (optional) */
+  .about__headline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+  }
+  
+  /* Tidy text width so it doesn't feel cramped on desktop */
+  @media (min-width: 62.5em) {
+    .about__text {
+      max-width: 65ch; /* readable measure */
+    }
+  }
+  
+  /* Mobile: stack and slightly reduce avatar size */
+  @media (max-width: 768px) {
+    .about__wrapper {
+      grid-template-columns: 1fr; /* stack image above text */
+      gap: 1.5rem;
+    }
+    .about__picture {
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+    }
+    .about__text,
+    .about__headline,
+    .about__description {
+      text-align: center;
+    }
+  }
+  
 /*############################# SKILLS styles #############################*/
 .skills {
 
@@ -531,10 +589,10 @@ p{
 .blog__grid {
     display: grid;
     gap: 32px;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     margin-bottom: 30px;
-}
-
+  }
+  
 .blog__item{
     border-radius: 5px;
     background-color: #96898917;
@@ -542,12 +600,14 @@ p{
 }
 
 /* Remove the height for this img until content is here*/
+
 .blog__item > img {
     width: 100%;
-    height: 180px;
+    height: 180px;        /* increase to 200px if you prefer taller thumbs */
+    object-fit: cover;    /* crop edges uniformly */
     border-radius: 5px 5px 0 0;
-    display: inline-block;
-}
+    display: block;
+  }  
 
 .blog__item-headline {
     padding: 20px;
