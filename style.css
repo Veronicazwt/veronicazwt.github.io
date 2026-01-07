@@ -639,6 +639,13 @@ p{
     justify-content: flex-start;
 }
 
+.contact__socials-item img {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+}
+
 .contact__socials-item > a > img {
     display: block;
 }
