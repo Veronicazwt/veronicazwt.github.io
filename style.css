@@ -384,7 +384,9 @@ p{
 .about__picture > img {
     border-radius: 50%;
     margin-bottom: 16px;
+    inline-size: clamp(160px, 26vw, 320px);
     display: block;
+    block-size: auto;
 }
 
 @media (prefers-reduced-motion: no-preference){
