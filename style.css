@@ -354,10 +354,10 @@ p{
 
 .about__image {
     margin-inline: auto;
-    /* position: absolute;
+    position: absolute;
     top: 0;
     left: 50%;
-    translate: -50%; */
+    translate: -50%; 
     display: block;
 }
 .about__text {
@@ -546,8 +546,9 @@ p{
 
 .blog__item > img {
     width: 100%;
-    height: 300px;        /* increase to 200px if you prefer taller thumbs */
-    object-fit: cover;    /* crop edges uniformly */
+    aspect-ratio: 16 / 9;;        /* increase to 200px if you prefer taller thumbs */
+    object-fit: cover; 
+    object-position: center;   /* crop edges uniformly */
     border-radius: 5px 5px 0 0;
     display: block;
   }  
